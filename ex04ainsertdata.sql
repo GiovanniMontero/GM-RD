@@ -9,9 +9,6 @@ INSERT INTO DEPARTMENT VALUES('InfoSystems', 'BC-700-10', 'BLDG02-210', '360-287
 INSERT INTO DEPARTMENT VALUES('Research and Development', 'BC-800-10', 'BLDG02-250', '360-287-8700');
 INSERT INTO DEPARTMENT VALUES('Production', 'BC-900-10', 'BLDG02-110', '360-287-8800');
 
-
-
-
 INSERT INTO EMPLOYEE(FirstName, LastName, Department, Position, OfficePhone, EmailAddress) 
 	VALUES(
 	'Mary', 'Jacobs', 'Administration', 'CEO', '360-285-8110', 'Mary.Jacobs@WP.com');
