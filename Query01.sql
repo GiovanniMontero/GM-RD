@@ -128,3 +128,80 @@ SELECT *
 FROM EMPLOYEE
 WHERE Department NOT LIKE '%ing';
 
+/* *** SQL-Query-CH03-26 *** */
+SELECT FirstName, LastName, Department, OfficePhone
+FROM EMPLOYEE
+WHERE OfficePhone IS NULL;
+
+/* *** SQL-Query-CH03-27 *** */
+SELECT FirstName, LastName, Department, OfficePhone
+FROM EMPLOYEE
+WHERE OfficePhone IS NOT NULL;
+
+/* *** SQL-Query-CH03-28 *** */
+SELECT COUNT(*)
+FROM PROJECT;
+
+/* *** SQL-Query-CH03-29 *** */
+SELECT COUNT(*) AS NumberOfProjects
+FROM PROJECT;
+
+/* *** SQL-Query-CH03-30 *** */
+SELECT COUNT(Department) AS NumberOfDepartments
+FROM PROJECT;
+
+/* *** SQL-Query-CH03-31 *** */
+SELECT COUNT(DISTINCT Department) AS NumberOfDepartments
+FROM PROJECT;
+
+/* *** SQL-Query-CH03-32 *** */
+SELECT SUM(MaxHours) AS TotalMaxHours,
+AVG(MaxHours) AS AverageMaxHours,
+MIN(MaxHours) AS MinimumMaxHours,
+MAX(MaxHours) AS MaximumMaxHours
+
+FROM PROJECT
+WHERE ProjectID <= 1200;
+
+/* *** SQL-Query-CH03-33 *** */
+SELECT ProjectName, COUNT(*)
+FROM PROJECT;
+
+/* *** SQL-Query-CH03-34 *** */
+SELECT *
+FROM PROJECT
+WHERE MaxHours > AVG(MaxHours);
+
+/* *** SQL-Query-CH03-35 *** */
+SELECT ProjectID, ProjectName, MaxHours,
+(24.50 * MaxHours) AS MaxProjectCost
+
+FROM PROJECT;
+
+/* *** SQL-Query-CH03-36 *** */
+SELECT Department, Count(*) AS NumberOfEmployees
+FROM EMPLOYEE
+GROUP BY Department;
+
+/* *** SQL-Query-CH03-37 *** */
+SELECT Department, Count(*) AS NumberOfEmployees
+FROM EMPLOYEE
+GROUP BY Department
+HAVING COUNT(*) > 1;
+
+/* *** SQL-Query-CH03-38 *** */
+SELECT Department, Count(*) AS NumberOfEmployees
+FROM EMPLOYEE
+WHERE EmployeeNumber <= 10
+GROUP BY Department
+HAVING COUNT(*) > 1;
+
+/* *** SQL-Query-CH03-39 *** */
+SELECT FirstName, LastName
+FROM EMPLOYEE
+WHERE EmployeeNumber IN (6, 10, 11, 16, 17);
+
+/* *** SQL-Query-CH03-40 *** */
+SELECT DISTINCT EmployeeNumber
+FROM ASSIGNMENT
+WHERE HoursWorked > 50;
