@@ -7,7 +7,7 @@ what we want the row to say, in this case it's "Adv Pastels."
 SELECT * FROM COURSE
 WHERE COURSE = Adv Pastels;
 
-Query1.png
+[](link-to-image)
 
 
 
@@ -26,6 +26,9 @@ FROM CUSTOMER C
 
 JOIN ENROLLMENT E
 ON C.CUSTOMERNUMBER = E.CUSTOMERNUMBER;
+
+
+[](link-to-image)
 
 --
 3. This query requires that we use information from all 3 tables, this simply means we'll need two 
@@ -46,6 +49,8 @@ WHERE CourseDate = To_Date('10/01/2019', 'mm/dd/yyyy')
 
 AND C.Course = 'Adv Pastels';
 
+[](link-to-image)
+
 --
 
 4. This query is almost identical to query number 3 however we are simply asked to include more information,
@@ -63,6 +68,8 @@ ON C.COURSENUMBER=E.COURSENUMBER
 WHERE CourseDate = To_Date('10/01/2019', 'mm/dd/yyyy')
 
 AND C.Course = 'Adv Pastels';
+
+[](link-to-image)
 
 
 
