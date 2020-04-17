@@ -27,4 +27,18 @@ JOIN COURSE C
 ON C.COURSENUMBER=E.COURSENUMBER
 WHERE CourseDate = To_Date('10/01/2019', 'mm/dd/yyyy')
 
+
+AND C.Course = 'Adv Pastels';
+
+
+//4. Query that identifies all students who enrolled in Adv Pastels on October 1st of 2019//
+
+SELECT C.Course, C.CourseDate, CR.CustomerLastName, CR.CustomerFirstName, CR.Phone, C.Fee, E.AmountPaid
+From Customer CR
+Join Enrollment E
+on CR.CustomerNumber = E.CustomerNumber
+JOIN COURSE C
+ON C.COURSENUMBER = E.COURSENUMBER
+WHERE CourseDate = To_Date('10/01/2019', 'mm/dd/yyyy')
+
 AND C.Course = 'Adv Pastels';
