@@ -7,6 +7,7 @@ what we want the row to say, in this case it's "Adv Pastels."
 SELECT * FROM COURSE
 WHERE COURSE = Adv Pastels;
 
+Query1.png
 
 
 
