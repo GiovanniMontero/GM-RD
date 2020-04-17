@@ -7,7 +7,9 @@ what we want the row to say, in this case it's "Adv Pastels."
 SELECT * FROM COURSE
 WHERE COURSE = Adv Pastels;
 
-[](link-to-image)
+![](https://github.com/GiovanniMontero/GM-RD/blob/EX07/Query1.png)
+
+
 
 
 
@@ -28,7 +30,7 @@ JOIN ENROLLMENT E
 ON C.CUSTOMERNUMBER = E.CUSTOMERNUMBER;
 
 
-[](link-to-image)
+![](https://github.com/GiovanniMontero/GM-RD/blob/EX07/Query2.png)
 
 --
 3. This query requires that we use information from all 3 tables, this simply means we'll need two 
@@ -49,7 +51,7 @@ WHERE CourseDate = To_Date('10/01/2019', 'mm/dd/yyyy')
 
 AND C.Course = 'Adv Pastels';
 
-[](link-to-image)
+![](https://github.com/GiovanniMontero/GM-RD/blob/EX07/Query3.png)
 
 --
 
@@ -69,7 +71,8 @@ WHERE CourseDate = To_Date('10/01/2019', 'mm/dd/yyyy')
 
 AND C.Course = 'Adv Pastels';
 
-[](link-to-image)
+![](https://github.com/GiovanniMontero/GM-RD/blob/EX07/Query4.png)
+
 
 
 
