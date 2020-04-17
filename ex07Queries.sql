@@ -15,3 +15,16 @@ FROM CUSTOMER C
 
 JOIN ENROLLMENT E
 ON C.CUSTOMERNUMBER = E.CUSTOMERNUMBER;
+
+
+//3. Query used to identify students who enrolled in Adv Pastels on October 1st of 2019//
+
+SELECT C.Course, C.CourseDate, C.Fee, CR.CustomerLastName, CR.CustomerFirstname, CR.Phone
+FROM CUSTOMER CR
+JOIN ENROLLMENT E
+ON CR.CustomerNumber=E.CustomerNumber
+JOIN COURSE C
+ON C.COURSENUMBER=E.COURSENUMBER
+WHERE CourseDate = To_Date('10/01/2019', 'mm/dd/yyyy')
+
+AND C.Course = 'Adv Pastels';
